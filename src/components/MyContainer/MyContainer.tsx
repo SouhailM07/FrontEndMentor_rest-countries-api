@@ -1,13 +1,14 @@
 // style
 import "./mycontainer.css";
 // components
-import { Navbar, SearchBar } from "../../components";
+import { Navbar, SearchBar, CountriesContainer } from "../../components";
 //
 export default function MyContainer() {
   return (
-    <div className="border-2 border-red-500">
+    <div className="">
       <Navbar />
       <SearchBar />
+      <CountriesContainer />
     </div>
   );
 }
