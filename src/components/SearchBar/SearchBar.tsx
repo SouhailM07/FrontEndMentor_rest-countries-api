@@ -6,7 +6,7 @@ import { ThemeContext } from "../../App";
 export default function SearchBar() {
   let { mode }: any = useContext(ThemeContext);
   return (
-    <div className="flex justify-between px-[3vw] items-center mt-[2rem]">
+    <div className="flex justify-between w-[90vw] m-auto items-center my-[3.6vw]">
       <div className="bg-Dark_Blue_DM_Elements w-[35vw] flex items-center justify-between px-[2vw] rounded-lg">
         <Magnifier />
         <input
