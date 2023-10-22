@@ -1,5 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer components {
+  nav {
+    @apply flex items-center justify-between;
+    @apply md:w-[100vw] md:px-[3vw] md:h-[7vw] px-[1.5vw] h-[10vw];
+  }
+  nav h1 {
+    @apply md:text-[2vw] font-semibold text-[3vw];
+  }
+  nav button {
+    @apply flex items-center justify-between;
+    @apply w-[11vw] md:w-[9vw];
+  }
+  #nav-mode {
+    @apply text-[1.6vw] capitalize font-semibold md:text-[1.2vw];
+    word-spacing: 0.2vw;
+  }
+  nav svg {
+    @apply w-[1.8vw] h-[1.8vw];
+  }
+
+  /*=====================================================================================*/
+  /* themes */
+  /*=====================================================================================*/
+
+  *[data-theme="t--dark"] {
+    @apply text-white;
+  }
+
+  *[data-theme="t--light"] {
+    @apply text-Very_Dark_Blue_DM_Background;
+  }
+
+  #nav--light {
+    @apply bg-Very_Light_Gray_LM_Background;
+  }
+  #nav--dark {
+    @apply bg-Dark_Blue_DM_Elements;
+  }
 }
