@@ -13,17 +13,18 @@ export const ThemeContext = React.createContext();
 function App() {
   let body = document.body as HTMLBodyElement;
   //
-  let [mode, setMode] = useState("light");
+  let [darkMode, setDarkMode] = useState(true);
   let switchMode = () => {
-    if (mode == "light") setMode("dark");
-    else if (mode == "dark") setMode("light");
-    console.log(mode);
+    setDarkMode(!darkMode);
+    console.log(darkMode);
+    darkMode
+      ? (document.documentElement.className = "dark")
+      : (document.documentElement.className = "light");
   };
   //
-  body.id = `body--${mode}`;
   return (
     <>
-      <ThemeContext.Provider value={{ mode, switchMode }}>
+      <ThemeContext.Provider value={{ darkMode, switchMode }}>
         <div>
           <MyContainer />
         </div>

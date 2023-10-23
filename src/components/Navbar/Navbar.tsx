@@ -5,17 +5,15 @@ import "./navbar.css";
 import { useContext } from "react";
 
 export default function Navbar() {
-  let { mode, switchMode }: any = useContext(ThemeContext);
+  let { darkMode, switchMode }: any = useContext(ThemeContext);
 
   return (
-    <nav id={`nav--${mode}`}>
-      <h1 data-theme={`t--${mode}`}>Where in the world?</h1>
+    <nav>
+      <h1>Where in the world?</h1>
       {/*  */}
       <button onClick={() => switchMode()}>
-        <span>{mode == "light" ? <LightModeIcon /> : <DarkModeIcon />}</span>
-        <span data-theme={`t--${mode}`} id="nav-mode">
-          {mode} Mode
-        </span>
+        <span>{darkMode ? <LightModeIcon /> : <DarkModeIcon />}</span>
+        <span id="nav-mode">{darkMode ? "light" : "dark"} Mode</span>
       </button>
       {/*  */}
     </nav>

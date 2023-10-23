@@ -20,7 +20,6 @@ export default function CountriesContainer() {
     // return searchedCountry.split("").every((l) => e.name.includes(l));
     return e.name.toLowerCase().includes(searchedCountry);
   });
-  console.log(arrOfTest);
   return (
     <>
       <article>
