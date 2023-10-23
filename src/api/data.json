@@ -528,6 +528,7 @@
       "svg": "https://flagcdn.com/aq.svg",
       "png": "https://flagcdn.com/w320/aq.png"
     },
+
     "languages": [
       {
         "iso639_1": "en",
@@ -556,6 +557,11 @@
       "hu": "Antarktisz"
     },
     "flag": "https://flagcdn.com/aq.svg",
+    "currencies": [
+      {
+        "code": ""
+      }
+    ],
     "independent": false
   },
   {

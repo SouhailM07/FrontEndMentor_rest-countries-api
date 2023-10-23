@@ -16,10 +16,10 @@ export default function CountriesContainer() {
   for (let i = 0; i < countries; i++) {
     arrOfCountries.push(i);
   }
-  let arrOfTest = data.filter((e, i) => {
-    // return searchedCountry.split("").every((l) => e.name.includes(l));
+  let arrOfTest = data.filter((e) => {
     return e.name.toLowerCase().includes(searchedCountry);
   });
+
   return (
     <>
       <article>
@@ -28,7 +28,7 @@ export default function CountriesContainer() {
             return <Country key={i} country={e} />;
           })}
         </div>
-        {arrOfTest.length >= 8 && countries! >= arrOfTest.length ? (
+        {arrOfTest.length >= 8 && arrOfTest.length > countries ? (
           <button
             onClick={() => {
               setCountries((countries += 8));
