@@ -2,4 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
+  .CountryBackground {
+    @apply cursor-pointer rounded-lg;
+    @apply dark:bg-Dark_Blue_DM_Elements bg-Very_Light_Gray_LM_Background;
+    @apply md:h-[25vw] md:mb-[4vw];
+    box-shadow: 0px 2px 10px black;
+  }
+  .Country {
+    @apply flex flex-col justify-between;
+    @apply md:h-[22vw] md:w-[18.5vw];
+  }
+  .Country img {
+    @apply md:w-[100%] md:h-[12vw] md:rounded-tr-[0.5vw] md:rounded-tl-[0.5vw];
+  }
+  .Country .CountryName {
+    @apply font-bold;
+    @apply md:text-[1.5vw] md:pl-[1.5vw];
+    @apply dark:text-white text-Very_Dark_Blue_LM_text;
+  }
+  .CountryDetails {
+    @apply dark:text-white text-Very_Dark_Blue_LM_text capitalize font-semibold;
+    @apply md:pl-[1.5vw];
+    @apply dark:text-white text-Very_Dark_Blue_LM_text;
+  }
 }
