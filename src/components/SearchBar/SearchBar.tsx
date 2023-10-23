@@ -1,10 +1,15 @@
 // style
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./searchbar.css";
 import { ThemeContext } from "../../App";
+// !redux
+import { useDispatch, useSelector } from "react-redux";
+import { searchCountry } from "./searchBarSlicer";
 
 export default function SearchBar() {
   let { mode }: any = useContext(ThemeContext);
+  let searchedCountry = useSelector((state: any) => state.search.search);
+  let dispatch = useDispatch();
   return (
     <div className="flex justify-between w-[90vw] m-auto items-center my-[3.6vw]">
       <div className="bg-Dark_Blue_DM_Elements w-[35vw] flex items-center justify-between px-[2vw] rounded-lg">
@@ -13,6 +18,10 @@ export default function SearchBar() {
           type="text"
           placeholder="Search for a country"
           id="SearchBar-search"
+          onChange={(e) => {
+            dispatch(searchCountry(e.target.value));
+            console.log(searchedCountry);
+          }}
           className="h-[4.4vw] bg-transparent w-[28vw] outline-none text-[1.2vw] "
           data-theme={`SearchBar-search--${mode}`}
         />
