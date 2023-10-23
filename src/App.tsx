@@ -16,7 +16,6 @@ function App() {
   let [darkMode, setDarkMode] = useState(true);
   let switchMode = () => {
     setDarkMode(!darkMode);
-    console.log(darkMode);
     document.documentElement.className = darkMode ? "dark" : "light";
   };
   //
