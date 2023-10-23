@@ -17,11 +17,11 @@ function App() {
   let switchMode = () => {
     setDarkMode(!darkMode);
     console.log(darkMode);
-    darkMode
-      ? (document.documentElement.className = "dark")
-      : (document.documentElement.className = "light");
+    document.documentElement.className = darkMode ? "dark" : "light";
   };
   //
+  body.className =
+    "dark:bg-Very_Dark_Blue_DM_Background Very_Light_Gray_LM_Background";
   return (
     <>
       <ThemeContext.Provider value={{ darkMode, switchMode }}>
