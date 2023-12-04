@@ -4,3 +4,4 @@ export { default as SearchBar } from "./SearchBar/SearchBar";
 export { default as CountriesContainer } from "./CountriesContainer/CountriesContainer";
 export { default as Country } from "./Country/Country";
 export { default as CountryPreviewer } from "./CountryPreviewer/CountryPreviewer";
+export { default as Filter_panel } from "./Filter_panel/Filter_panel";
