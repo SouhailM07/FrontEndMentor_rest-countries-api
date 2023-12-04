@@ -4,22 +4,22 @@
 
 @layer components {
   #SearchBar {
-    @apply flex justify-between m-auto items-center;
-    @apply md:w-[90vw] md:my-[3.6vw];
+    @apply flex md:flex-row flex-col items-baseline justify-between m-auto md:items-center;
+    @apply my-[5rem] w-[92%] h-[5rem];
   }
   #SearchBar-inputContainer {
     @apply flex items-center justify-between rounded-lg;
-    @apply md:w-[35vw] md:px-[2vw];
+    @apply w-[35rem] h-full px-[2rem];
     @apply dark:bg-Dark_Blue_DM_Elements;
     box-shadow: 0px 2px 9px 0 black;
   }
   #SearchBar-inputContainer input[type="text"] {
     @apply outline-none;
-    @apply md:h-[4.4vw] md:w-[28vw] md:text-[1.2vw];
-    @apply bg-transparent;
+    @apply text-[1.3rem] w-[28rem] h-[100%];
+    @apply bg-transparent text-Dark_Gray_LM_Input font-semibold;
   }
   #SearchBar-inputContainer svg {
-    @apply md:h-[2vw] md:w-[2vw];
+    @apply h-[2rem] w-[2rem];
     @apply dark:fill-white fill-Dark_Gray_LM_Input;
   }
 }
