@@ -38,12 +38,12 @@ export default function CountryPreviewer() {
   return (
     <article className="CountryPreviewer">
       <BackBtn />
-      <div className="CountryPreviewer-dataContainer">
+      <div className="CountryPreviewer-dataContainer ">
         <img src={selectedCountry.flag} alt="flag" />
         <div className="CountryPreviewer-dataContainer-details">
           <div>
             <Country_name s_country={selectedCountry} />
-            <div className="grid grid-cols-2">
+            <div className="grid tb:grid-cols-2 tb:gap-y-[0rem] gap-y-[2rem] grid-cols-1">
               <Details_s1
                 arr_labels={arrOfDetailsLabels_s1}
                 arr_details={arrOfDetails_s1}
@@ -84,7 +84,7 @@ let BackBtn = () => {
 let Details_s1 = ({ arr_details, arr_labels }) => {
   return (
     <>
-      <div className="details" style={{ wordSpacing: "0.2rem" }}>
+      <div className="details mr-[1rem]" style={{ wordSpacing: "0.2rem" }}>
         {arr_labels.map((e, i) => {
           return (
             <p key={i}>
@@ -155,11 +155,10 @@ let Border_countries = ({ s_country }) => {
   let dispatch = useDispatch();
   return (
     <>
-      <div
-        className="lg:flex mt-4 lg:space-x-[0.7rem]"
-        style={{ gridArea: "3/1/3/3" }}
-      >
-        <span>Border Countries:</span>
+      <div className="lg:flex mt-4 lg:space-x-[0.7rem]">
+        <span className="xs:block tb:inline xs:my-[2rem]">
+          Border Countries:
+        </span>
         <div className="borderContainer">
           {s_country.borders?.map((e, i) => {
             return (

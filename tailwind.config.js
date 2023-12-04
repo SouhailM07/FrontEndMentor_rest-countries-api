@@ -12,6 +12,7 @@
         White_details: "hsl(0, 0%, 100%)",
       },
       screens: {
+        xs: "0px",
         sm: "570px",
         md: "680px",
         tb: "768px",
