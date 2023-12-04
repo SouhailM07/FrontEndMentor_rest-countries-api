@@ -5,17 +5,17 @@
 @layer components {
   #SearchBar {
     @apply flex md:flex-row flex-col items-baseline justify-between m-auto md:items-center;
-    @apply my-[5rem] w-[92%] h-[5rem];
+    @apply border-2 my-[5rem] w-[92%] md:h-[5rem];
   }
   #SearchBar-inputContainer {
     @apply flex items-center justify-between rounded-lg;
-    @apply w-[35rem] h-full px-[2rem];
+    @apply w-full md:w-[35rem]  h-full px-[2rem];
     @apply dark:bg-Dark_Blue_DM_Elements;
     box-shadow: 0px 2px 9px 0 black;
   }
   #SearchBar-inputContainer input[type="text"] {
     @apply outline-none;
-    @apply text-[1.3rem] w-[28rem] h-[100%];
+    @apply text-[1.3rem] w-full md:w-[28rem] h-[4rem] md:h-[100%];
     @apply bg-transparent text-Dark_Gray_LM_Input font-semibold;
   }
   #SearchBar-inputContainer svg {

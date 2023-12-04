@@ -23,7 +23,7 @@ export default function CountriesContainer() {
   return (
     <>
       <article>
-        <div className="w-[90vw] m-auto flex flex-wrap justify-between">
+        <div id="CountriesContainer">
           {arrOfTest.slice(0, countries).map((e, i) => {
             return <Country key={i} country={e} />;
           })}
@@ -33,7 +33,7 @@ export default function CountriesContainer() {
             onClick={() => {
               setCountries((countries += 8));
             }}
-            className="outline-none my-[2vw] font-semibold w-[18vw] h-[5vw] text-[2vw] bg-Dark_Blue_DM_Elements text-white rounded-xl block m-auto "
+            id="CountriesContainer-loadingBtn"
           >
             Load More
           </button>

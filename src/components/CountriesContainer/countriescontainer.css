@@ -1,5 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer components {
+  #CountriesContainer {
+    @apply m-auto grid grid-cols-4 place-items-center;
+    @apply max-w-[98rem];
+    /* grid-template-columns:  */
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  }
+  #CountriesContainer-loadingBtn {
+    @apply outline-none font-semibold block m-auto;
+    @apply my-[2rem] w-[18rem] h-[5rem] text-[2rem]  rounded-xl;
+    @apply bg-Dark_Blue_DM_Elements text-white;
+  }
 }

@@ -24,7 +24,7 @@ export default function Country({ country }) {
       <div className="Country">
         <img src={country.flag} alt="flag" />
         <h3 className="CountryName">{country.name}</h3>
-        <div className="CountryDetails" style={{ lineHeight: "1.6vw" }}>
+        <div className="CountryDetails" style={{ lineHeight: "1.6rem" }}>
           {arrOfDetails.map((e, i) => {
             return (
               <p key={i}>

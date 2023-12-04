@@ -12,7 +12,10 @@
         White_details: "hsl(0, 0%, 100%)",
       },
       screens: {
+        sm: "570px",
         md: "680px",
+        tb: "768px",
+        lg: "1024px",
       },
     },
   },

@@ -9,6 +9,7 @@ let countryPreviewerSlice = createSlice({
   initialState,
   reducers: {
     addCountry: (state, action) => {
+      state.country = "";
       state.country = action.payload;
     },
     reset: (state) => {

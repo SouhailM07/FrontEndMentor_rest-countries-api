@@ -5,24 +5,24 @@
 @layer components {
   nav {
     @apply flex items-center justify-between;
-    @apply md:w-[100vw] md:px-[4.5vw] md:h-[7vw] px-[1.5vw] h-[10vw];
+    @apply w-[100%] px-[1.8rem] sm:px-[4.5rem] h-[6rem];
     @apply bg-white dark:bg-Dark_Blue_DM_Elements;
     box-shadow: 0px 0px 10px 0px black;
   }
   nav h1 {
-    @apply md:text-[2vw] font-semibold text-[3vw];
+    @apply md:text-[2rem] font-semibold text-[1.5rem];
     @apply dark:text-white;
   }
   nav button {
     @apply flex items-center justify-between;
-    @apply w-[11vw] md:w-[9vw];
+    @apply sm:w-[9rem] w-[7.5rem];
     @apply dark:text-white;
   }
   #nav-mode {
-    @apply text-[1.6vw] capitalize font-semibold md:text-[1.2vw];
-    word-spacing: 0.2vw;
+    @apply capitalize font-semibold sm:text-[1.2rem];
+    word-spacing: 0.2rem;
   }
   nav svg {
-    @apply w-[1.8vw] h-[1.8vw];
+    @apply w-[1.8rem] h-[1.8rem];
   }
 }
