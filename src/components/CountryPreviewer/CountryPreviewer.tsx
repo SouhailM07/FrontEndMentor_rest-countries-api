@@ -89,9 +89,7 @@ let Details_s1 = ({ arr_details, arr_labels }) => {
           return (
             <p key={i}>
               {e}:{" "}
-              <span className="text-Very_Dark_Blue_LM_text">
-                {arr_details[i]}
-              </span>
+              <span className="text-Dark_Gray_LM_Input">{arr_details[i]}</span>
             </p>
           );
         })}
@@ -107,10 +105,8 @@ let Details_s2 = ({ arr_details, arr_labels, s_country }) => {
         {arr_labels.map((e, i) => {
           return (
             <p key={i}>
-              {e}:
-              <span className="text-Very_Dark_Blue_LM_text">
-                {arr_details[i]}
-              </span>
+              {e}:{" "}
+              <span className="text-Dark_Gray_LM_Input">{arr_details[i]}</span>
             </p>
           );
         })}
@@ -118,12 +114,12 @@ let Details_s2 = ({ arr_details, arr_labels, s_country }) => {
           Languages:
           {s_country.languages.map((e: any, i) => {
             return i !== s_country.languages.length - 1 ? (
-              <span key={i} className="text-Very_Dark_Blue_LM_text">
+              <span key={i} className="text-Dark_Gray_LM_Input">
                 {" "}
                 {e.nativeName},
               </span>
             ) : (
-              <span key={i} className="text-Very_Dark_Blue_LM_text">
+              <span key={i} className="text-Dark_Gray_LM_Input">
                 {" "}
                 {e.nativeName}
               </span>
@@ -155,8 +151,8 @@ let Border_countries = ({ s_country }) => {
   let dispatch = useDispatch();
   return (
     <>
-      <div className="lg:flex mt-4 lg:space-x-[0.7rem]">
-        <span className="xs:block tb:inline xs:my-[2rem]">
+      <div className="lg:flex xs:mt-4 lg:space-x-[0.7rem]">
+        <span className="xs:block tb:my-[0rem] xs:my-[2rem]">
           Border Countries:
         </span>
         <div className="borderContainer">

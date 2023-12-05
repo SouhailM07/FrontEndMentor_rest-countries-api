@@ -5,13 +5,13 @@
 @layer components {
   #SearchBar {
     @apply flex md:flex-row flex-col items-baseline justify-between m-auto md:items-center;
-    @apply border-2 my-[5rem] w-[92%] md:h-[5rem];
+    @apply mt-[3rem] mb-[4rem] tb:my-[5rem] w-[92%] md:h-[5rem];
   }
   #SearchBar-inputContainer {
     @apply flex items-center justify-between rounded-lg;
     @apply w-full md:w-[35rem]  h-full px-[2rem];
     @apply dark:bg-Dark_Blue_DM_Elements;
-    box-shadow: 0px 2px 9px 0 black;
+    box-shadow: 0px 2px 8px 0 black;
   }
   #SearchBar-inputContainer input[type="text"] {
     @apply outline-none;
@@ -19,7 +19,11 @@
     @apply bg-transparent text-Dark_Gray_LM_Input font-semibold;
   }
   #SearchBar-inputContainer svg {
-    @apply h-[2rem] w-[2rem];
+    @apply h-[2rem] w-[2rem] mr-[1rem];
     @apply dark:fill-white fill-Dark_Gray_LM_Input;
   }
+}
+
+#filter_panel_select {
+  box-shadow: 0px 2px 8px 0 black;
 }

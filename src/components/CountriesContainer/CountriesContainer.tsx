@@ -19,15 +19,30 @@ export default function CountriesContainer() {
   let arrOfTest = data.filter((e) => {
     return e.name.toLowerCase().includes(searchedCountry);
   });
-
+  let selected_region = useSelector(
+    (state: any) => state.filter_panel_tg.selected_region
+  );
   return (
     <>
       <article>
-        <div id="CountriesContainer">
-          {arrOfTest.slice(0, countries).map((e, i) => {
-            return <Country key={i} country={e} />;
-          })}
-        </div>
+        {selected_region == "All" ? (
+          <div id="CountriesContainer">
+            {arrOfTest.slice(0, countries).map((e, i) => {
+              return <Country key={i} country={e} />;
+            })}
+          </div>
+        ) : (
+          <div id="CountriesContainer">
+            {arrOfTest
+              .filter((e) => {
+                return e.region == selected_region;
+              })
+              .slice(0, countries)
+              .map((e, i) => {
+                return <Country key={i} country={e} />;
+              })}
+          </div>
+        )}
         {arrOfTest.length >= 8 && arrOfTest.length > countries ? (
           <button
             onClick={() => {

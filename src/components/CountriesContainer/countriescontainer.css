@@ -4,9 +4,8 @@
 
 @layer components {
   #CountriesContainer {
-    @apply m-auto grid grid-cols-4 place-items-center;
+    @apply m-auto grid place-items-center;
     @apply max-w-[98rem];
-    /* grid-template-columns:  */
     grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
   }
   #CountriesContainer-loadingBtn {
