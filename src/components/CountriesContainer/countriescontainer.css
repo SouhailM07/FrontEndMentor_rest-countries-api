@@ -11,6 +11,6 @@
   #CountriesContainer-loadingBtn {
     @apply outline-none font-semibold block m-auto;
     @apply my-[2rem] w-[18rem] h-[5rem] text-[2rem]  rounded-xl;
-    @apply bg-Dark_Blue_DM_Elements text-white;
+    @apply bg-white shadow-xl dark:bg-Dark_Blue_DM_Elements dark:text-white;
   }
 }

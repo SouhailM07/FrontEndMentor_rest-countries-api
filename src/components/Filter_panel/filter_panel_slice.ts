@@ -5,7 +5,7 @@ interface initialType {
 }
 
 let initialState: initialType = {
-  filter_panel_tg: true,
+  filter_panel_tg: false,
   selected_region: "All",
 };
 
